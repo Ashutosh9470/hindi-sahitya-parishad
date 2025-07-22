@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>नवीनतम कार्यक्रम | हिन्दी साहित्य परिषद्</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/navbar.css">
   <style>
     body {
       font-family: 'Noto Sans Devanagari', sans-serif;
@@ -121,6 +122,8 @@
 <body>
 
   <div id="navbar-placeholder"></div>
+  <link rel="stylesheet" href="css/navbar.css">
+  <script src="js/include-navbar.js"></script>
 
   <main>
     <section class="event-section">
@@ -172,10 +175,6 @@
   <!-- Scripts -->
   <script src="js/scripts.js"></script>
   <script>
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
-
     fetch('footer.html')
       .then(res => res.text())
       .then(data => document.getElementById('footer-placeholder').innerHTML = data);
