@@ -1,0 +1,44 @@
+<footer style="background:#8d5524; color:#fff; padding:32px 0 12px 0; margin-top:32px;">
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; max-width:1200px; margin:auto;">
+    <div style="flex:1; min-width:180px; text-align:center;">
+      <img src="https://i.ibb.co/fVysfYNV/logo.png" alt="हिन्दी साहित्य परिषद् लोगो" style="height:120px; margin-bottom:12px;">
+    </div>
+    <div style="flex:2; min-width:200px;">
+      <ul style="list-style:none; padding:0; margin:0; text-align:center;">
+        <li><a href="index.html" style="color:#fff; text-decoration:none;">मुखपृष्ठ</a></li>
+        <li><a href="about.html" style="color:#fff; text-decoration:none;">परिचय</a></li>
+        <li><a href="core_members.html" style="color:#fff; text-decoration:none;">परिषद कार्यकारिणी</a></li>
+        <li><a href="blogs.html" style="color:#fff; text-decoration:none;">ब्लॉग</a></li>
+        <li><a href="events.html" style="color:#fff; text-decoration:none;">नवीनतम कार्यक्रम</a></li>
+        <li><a href="members.html" style="color:#fff; text-decoration:none;">सदस्य</a></li>
+        <li><a href="contact.html" style="color:#fff; text-decoration:none;">संपर्क करें</a></li>
+        <li><a href="gallery.html" style="color:#fff; text-decoration:none;">गैलरी</a></li>
+      </ul>
+    </div>
+    <div style="flex:2; min-width:220px; text-align:center;">
+      <div style="font-size:1.2rem; font-weight:bold;">विकासकर्ता:</div>
+      <div>अशुतोष कुमार</div>
+      <div>ईमेल: <a href="mailto:sharmashutosh02@gmail.com" style="color:#b3e5fc;">sharmashutosh02@gmail.com</a></div>
+      <div>फोन: <a href="tel:9256280731" style="color:#b3e5fc;">9256280731</a></div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:18px; color:#fff;">
+    © 2025 हिन्दी साहित्य परिषद्. सर्वाधिकार सुरक्षित।<br>
+    कुल विजिट्स: <span id="visit-count">...</span>
+  </div>
+  <script>
+    // Use JSON for storage count
+    let visitData = localStorage.getItem('hsp_visit_data');
+    let visits = 0;
+    if (visitData) {
+      try {
+        visits = JSON.parse(visitData).count || 0;
+      } catch(e) {
+        visits = 0;
+      }
+    }
+    visits++;
+    localStorage.setItem('hsp_visit_data', JSON.stringify({ count: visits }));
+    document.getElementById('visit-count').textContent = visits;
+  </script>
+</footer>

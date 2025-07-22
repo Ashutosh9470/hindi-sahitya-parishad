@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>नवीनतम कार्यक्रम | हिन्दी साहित्य परिषद्</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf5;
+      color: #2c2c2c;
+    }
+
+    .event-section {
+      padding: 24px 16px;
+      max-width: 1024px;
+      margin: auto;
+    }
+
+    .event-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #8d5524;
+      margin-bottom: 24px;
+    }
+
+    .event-card {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .event-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #8d5524;
+    }
+
+    .event-card p {
+      line-height: 1.6;
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    .event-slideshow {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: 18px auto;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .event-slideshow .slide {
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(141,85,36,0.1);
+      cursor: pointer;
+      display: block;
+      background: #f5f5f5;
+    }
+
+    a {
+      color: #8d5524;
+    }
+
+    /* 🔽 Responsive styling */
+    @media (max-width: 700px) {
+      .event-section h2,
+      .event-card h3 {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .event-card {
+        padding: 12px 6px 24px 6px;
+        box-sizing: border-box;
+        background: #fff;
+      }
+
+      .event-slideshow {
+        flex-direction: column;
+        gap: 16px;
+        max-width: 98vw;
+        width: 100%;
+        align-items: center;
+        margin: 18px 0 18px 0;
+      }
+
+      .event-slideshow .slide {
+        width: 90vw;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        box-sizing: border-box;
+      }
+
+      #img-modal img {
+        max-width: 98vw;
+        max-height: 80vh;
+      }
+
+      .event-card p {
+        margin-bottom: 14px;
+        margin-top: 0;
+        text-align: justify;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <section class="event-section">
+      <h2>नवीनतम कार्यक्रम</h2>
+
+      <!-- 📘 Event 1 -->
+      <div class="event-card">
+        <h3>हिंदी साहित्य परिषद की गृह पत्रिका "संसृति" (स्वर्ण जयंती विशेषांक)</h3>
+        <p>
+          हमें यह गर्वपूर्ण हर्ष के साथ सूचित करते हुए अत्यंत प्रसन्नता हो रही है कि हिन्दी साहित्य परिषद् की गौरवशाली गृह-पत्रिका ‘संस्कृति’ ने अपने स्वर्ण जयंती वर्ष (1974–2024) के पावन अवसर पर सफलतापूर्वक प्रकाशन का कीर्तिमान स्थापित किया है। यह उपलब्धि परिषद् के साहित्यप्रेमी सदस्यों की सृजनात्मक प्रतिभा, समर्पित सहयोग तथा अविचल साधना का अनुपम परिणाम है।
+        </p>
+        <p>
+          ‘संस्कृति’ न केवल हमारी साहित्यिक परंपरा की अमूल्य धरोहर है, अपितु यह परिषद् की चेतना, संकल्प और संस्कार की जीवंत अभिव्यक्ति भी है। इस गौरवपूर्ण अवसर पर परिषद् के सम्मानित सदस्यों को यह स्मृति-स्वरूप पत्रिका समर्पित करते हुए हमें परम संतोष एवं आत्मिक आनंद की अनुभूति हो रही है।
+        </p>
+        <p style="text-align:right;">-- दीनानाथ शर्मा (सचिव)</p>
+        <div class="event-slideshow" style="display: flex; gap: 18px; justify-content: center; align-items: center; flex-wrap: nowrap;">
+          <img src="https://i.ibb.co/TBS5LY59/book1.jpg" alt="संस्कृति पुस्तक - 1" style="width: 180px; height: 240px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(141,85,36,0.1); background: #f5f5f5;">
+          <img src="https://i.ibb.co/8LBs9Gk4/book2.jpg" alt="संस्कृति पुस्तक - 2" style="width: 180px; height: 240px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(141,85,36,0.1); background: #f5f5f5;">
+          <img src="https://i.ibb.co/nqYcLq5V/book3.jpg" alt="संस्कृति पुस्तक - 3" style="width: 180px; height: 240px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(141,85,36,0.1); background: #f5f5f5;">
+          <img src="https://i.ibb.co/FbPGf2xZ/book4.jpg" alt="संस्कृति पुस्तक - 4" style="width: 180px; height: 240px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(141,85,36,0.1); background: #f5f5f5;">
+        </div>
+        <p>
+          <a href="Sansriti.pdf" target="_blank" download>📄 संस्कृत PDF डाउनलोड करें</a>
+        </p>
+      </div>
+
+      <!-- 📘 Event 2 -->
+      <div class="event-card">
+        <h3>गृह पत्रिका "संसृति"</h3>
+        <p>
+          हिन्दी साहित्य परिषद्" की गृह पत्रिका "संसृति" का यह विशेषांक परिषद् की गौरवशाली परंपरा, प्रतिबद्धता और साहित्यिक चेतना का सजीव प्रमाण है। यह अंक उन समर्पित एवं सम्मानित सदस्यों की कर्तव्यनिष्ठ साधना का दर्पण है, जिनकी अविरल साहित्य-सेवा ने परिषद् को नई ऊँचाइयाँ प्रदान कीं। स्थापना-काल से अब तक जुड़ी पीढ़ियों के साहित्य अनुराग, तप और सृजनशीलता का स्मरण करते हुए शब्द भी अक्षम प्रतीत होते हैं।
+
+        </p>
+        <p style="text-align:right;">-- दीनानाथ शर्मा (सचिव)</p>
+        <div class="event-slideshow" style="display: flex; gap: 18px; justify-content: center; align-items: center; flex-wrap: nowrap;">
+          <img src="https://i.ibb.co/Df43kTc4/book01.png" style="width: 180px; height: 240px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(141,85,36,0.1); background: #f5f5f5;" alt="संस्कृति पुस्तक - 1">
+          <img src="https://i.ibb.co/rKRL6vCK/book02.png" style="width: 180px; height: 240px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(141,85,36,0.1); background: #f5f5f5;" alt="संस्कृति पुस्तक - 2">
+          <img src="https://i.ibb.co/KYC9w9p/book03.png" style="width: 180px; height: 240px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(141,85,36,0.1); background: #f5f5f5;" alt="संस्कृति पुस्तक - 3">
+        </div>
+        <p>
+          <a href="sanskrit1.pdf" target="_blank" download>📄 संस्कृत PDF डाउनलोड करें</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="js/scripts.js"></script>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+
+  <!-- Modal for images -->
+  <div id="img-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+    <img id="modal-img" src="" alt="Enlarged" style="max-width:90vw; max-height:90vh; border-radius:12px; box-shadow:0 4px 24px #000;">
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.event-slideshow img').forEach(function (img) {
+        img.addEventListener('click', function () {
+          document.getElementById('modal-img').src = this.src;
+          document.getElementById('img-modal').style.display = 'flex';
+        });
+      });
+      document.getElementById('img-modal').addEventListener('click', function () {
+        this.style.display = 'none';
+        document.getElementById('modal-img').src = '';
+      });
+    });
+  </script>
+</body>
+</html>

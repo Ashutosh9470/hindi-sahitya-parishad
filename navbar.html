@@ -1,0 +1,198 @@
+<header>
+  <nav>
+    <div class="nav-top">
+      <img src="https://i.ibb.co/9kN64RFM/logo1.png" alt="Logo1" class="logo-left" />
+      <div class="nav-title-group">
+        <h1>हिन्दी साहित्य परिषद्</h1>
+        <h2 class="golden-jubilee1">(स्वर्ण जयंती वर्ष: 1974 – 2024)</h2>
+        <h2 class="golden-jubilee">वाणी भवन, बोकारो थर्मल</h2>
+        <h2 class="golden-jubilee">पत्रालय: बोकारो थर्मल, जनपद – बोकारो(झारखण्ड) पिन – 829107</h2>
+        <h2 class="golden-jubilee">(पंजीयन संख्या – 81 बिहार सरकार)</h2>
+        <h2 class="golden-jubilee">दामोदर घाटी निगम से मान्यता प्राप्त</h2>
+      </div>
+      <img src="https://i.ibb.co/fVysfYNV/logo.png" alt="हिन्दी साहित्य परिषद् लोगो" class="logo-right" />
+      <button class="hamburger" id="hamburger-btn">&#9776;</button>
+    </div>
+
+    <ul id="navbar-links">
+      <li><a href="index.html">मुखपृष्ठ</a></li>
+      <li><a href="about.html">परिचय</a></li>
+      <li><a href="core_members.html">परिषद कार्यकारिणी</a></li>
+      <li><a href="blogs.html">ब्लॉग</a></li>
+      <li><a href="events.html">नवीनतम कार्यक्रम</a></li>
+      <li><a href="members.html">सदस्य</a></li>
+      <li><a href="gallery.html">फोटो गैलरी</a></li>
+      <li><a href="contact.html">संपर्क सूत्र</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+/* === Core Styling === */
+header {
+  position: relative;
+}
+
+nav {
+  background-color: #8d5524; /* Dark brown */
+  color: white;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  position: relative;
+}
+
+.logo-left,
+.logo-right {
+  height: 90px;
+  width: auto;
+}
+
+.nav-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-top h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  color: white;
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.golden-jubilee1 {
+  color: #ffd700;
+  font-size: 0.9rem;
+  margin: 0;
+  margin-top: 4px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.golden-jubilee {
+  color: #f1f1f1;
+  font-size: 0.9rem;
+  margin: 0;
+  margin-top: 4px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 2.2rem;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  z-index: 200;
+}
+
+/* Navbar Links */
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  background: #8d5524;
+  flex-wrap: wrap;
+  transition: all 0.3s;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+/* === Responsive Styling === */
+@media (max-width: 800px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none !important;
+  }
+  nav ul.show {
+    display: flex !important;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: #fff3e0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 150;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav ul.show {
+    display: flex !important;
+  }
+
+  nav ul li a {
+    color: #8d5524;
+    font-size: 1.3rem;
+    padding: 16px 0;
+    width: 100vw;
+    text-align: center;
+    border-bottom: 1px solid #e0c9b3;
+  }
+
+  .logo-left,
+  .logo-right {
+    height: 60px;
+  }
+
+  .nav-top h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 801px) {
+  nav ul {
+    display: flex !important;
+    position: static;
+    background: #8d5524;
+    width: auto;
+    box-shadow: none;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('hamburger-btn');
+  var links = document.getElementById('navbar-links');
+  if(btn && links) {
+    btn.onclick = function () {
+      links.classList.toggle('show');
+    };
+  }
+});
+</script>

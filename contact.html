@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संपर्क सूत्र | हिन्दी साहित्य परिषद्</title>
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #fffaf5;
+            color: #2c2c2c;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-container {
+            max-width: 340px;
+            margin: 48px auto 32px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(141,85,36,0.13), 0 1.5px 6px rgba(141,85,36,0.08);
+            padding: 28px 18px 20px 18px;
+            transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+            border: 1.5px solid #e0c9b3;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-container::before {
+            content: "";
+            position: absolute;
+            top: -60px;
+            left: -60px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #ffe0b2 60%, transparent 100%);
+            opacity: 0.5;
+            z-index: 0;
+        }
+        .contact-container h2 {
+            color: #8d5524;
+            text-align: center;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+            font-size: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .contact-details {
+            font-size: 1.15rem;
+            line-height: 2.1;
+            position: relative;
+            z-index: 1;
+        }
+        .contact-details strong {
+            color: #8d5524;
+            font-size: 1.18rem;
+        }
+        .contact-details a {
+            color: #8d5524;
+            text-decoration: underline;
+            word-break: break-all;
+            transition: color 0.2s;
+        }
+        .contact-details a:hover {
+            color: #d2691e;
+        }
+        .contact-container:hover, .contact-container:focus-within {
+            box-shadow: 0 12px 40px rgba(141,85,36,0.22), 0 2px 8px rgba(141,85,36,0.13);
+            transform: translateY(-4px) scale(1.025);
+            background: linear-gradient(120deg, #fffaf5 80%, #ffe0b2 100%);
+            border-color: #d7b08c;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <main>
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+            <div class="contact-container" tabindex="0" style="margin-top: 24px; flex:1 1 320px; max-width:340px;">
+                <div class="contact-details">
+                    <strong>डॉ0 सुमन कुमार झा</strong><br>
+                    अध्यक्ष<br>
+                    हिंदी साहित्य परिषद<br>
+                    वाणी भवन, बोकारो थर्मल<br>
+                    पत्रालय - बोकारो थर्मल<br>
+                    जनपद - बोकारो (झारखंड)<br>
+                    पिन - 829107
+                </div>
+            </div>
+            <div class="contact-container" tabindex="0" style="margin-top: 24px; flex:1 1 320px; max-width:340px;">
+                <div class="contact-details">
+                    <strong>दीनानाथ शर्मा</strong><br>
+                    सचिव<br>
+                    हिंदी साहित्य परिषद<br>
+                    वाणी भवन, बोकारो थर्मल<br>
+                    पत्रालय - बोकारो थर्मल<br>
+                    जनपद - बोकारो (झारखंड)<br>
+                    पिन - 829107<br>
+                    मोबाइल संख्या - <a href="tel:9431776872">9431776872</a><br>
+                    ईमेल - <a href="mailto:dsharma0934@gmail.com">dsharma0934@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+            <div class="contact-container" tabindex="0" style="margin-top: 24px; flex:1 1 320px; max-width:340px;">
+                <div class="contact-details">
+                    <strong>सत्यजीत कुमार सिन्हा</strong><br>
+                    संयुक्त सचिव<br>
+                    हिंदी साहित्य परिषद<br>
+                    वाणी भवन, बोकारो थर्मल<br>
+                    पत्रालय - बोकारो थर्मल<br>
+                    जनपद - बोकारो (झारखंड)<br>
+                    पिन - 829107<br>
+                    मोबाइल संख्या - <a href="tel:9431778007">9431778007</a>
+                    <br>
+                    ईमेल - <a href="mailto:satyajitbtps@gmail.com">satyajitbtps@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-container" tabindex="0" style="margin-top: 24px; flex:1 1 320px; max-width:340px;">
+                <div class="contact-details">
+                    <strong>मनोज कुमार गुप्ता</strong><br>
+                    संयुक्त सचिव<br>
+                    हिंदी साहित्य परिषद<br>
+                    वाणी भवन, बोकारो थर्मल<br>
+                    पत्रालय - बोकारो थर्मल<br>
+                    जनपद - बोकारो (झारखंड)<br>
+                    पिन - 829107<br>
+                    मोबाइल संख्या - <a href="tel:9905720812">9905720812</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('navbar.html')
+          .then(res => res.text())
+          .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+
+        fetch('footer.html')
+          .then(res => res.text())
+          .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>
