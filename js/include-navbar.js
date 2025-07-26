@@ -9,10 +9,17 @@ window.addEventListener('DOMContentLoaded', function() {
       })
       .then(html => {
         placeholder.innerHTML = html;
+        // Attach hamburger event after navbar is loaded
+        var btn = document.getElementById('hamburger-btn');
+        var links = document.getElementById('navbar-links');
+        if(btn && links) {
+          btn.onclick = function () {
+            links.classList.toggle('show');
+          };
+        }
       })
       .catch(error => {
         placeholder.innerHTML = '<div style="color:red; text-align:center;">Navbar लोड नहीं हो सका</div>';
-        console.error('Navbar load error:', error);
       });
   }
 }); 
