@@ -24,21 +24,71 @@
   </div>
   <div style="text-align:center; margin-top:18px; color:#fff;">
     © 2025 हिन्दी साहित्य परिषद्. सर्वाधिकार सुरक्षित।<br>
-    कुल विजिट्स: <span id="visit-count">...</span>
+    कुल विजिट्स: <span id="visit-count">लोड हो रहा है...</span>
   </div>
   <script>
-    // Use JSON for storage count
-    let visitData = localStorage.getItem('hsp_visit_data');
-    let visits = 0;
-    if (visitData) {
+    // Enhanced visit counter using PHP backend
+    async function updateVisitCount() {
+      const visitCountElement = document.getElementById('visit-count');
+      
       try {
-        visits = JSON.parse(visitData).count || 0;
-      } catch(e) {
-        visits = 0;
+        // First, increment the visit count
+        const incrementResponse = await fetch('visit-counter.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+        
+        if (incrementResponse.ok) {
+          const data = await incrementResponse.json();
+          visitCountElement.textContent = data.visits.toLocaleString('hi-IN');
+        } else {
+          throw new Error('Failed to increment visit count');
+        }
+      } catch (error) {
+        console.log('PHP method failed, trying localStorage fallback');
+        
+        // Fallback to localStorage with session tracking
+        let visitData = localStorage.getItem('hsp_visit_data');
+        let visits = 0;
+        let lastVisit = 0;
+        
+        if (visitData) {
+          try {
+            const parsed = JSON.parse(visitData);
+            visits = parsed.count || 0;
+            lastVisit = parsed.lastVisit || 0;
+          } catch(e) {
+            visits = 0;
+            lastVisit = 0;
+          }
+        }
+        
+        const now = Date.now();
+        const oneDay = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+        
+        // Only count as new visit if it's been more than 24 hours since last visit
+        if (now - lastVisit > oneDay) {
+          visits++;
+          localStorage.setItem('hsp_visit_data', JSON.stringify({ 
+            count: visits, 
+            lastVisit: now 
+          }));
+        }
+        
+        visitCountElement.textContent = visits.toLocaleString('hi-IN');
       }
     }
-    visits++;
-    localStorage.setItem('hsp_visit_data', JSON.stringify({ count: visits }));
-    document.getElementById('visit-count').textContent = visits;
+    
+    // Initialize visit counter when page loads
+    document.addEventListener('DOMContentLoaded', updateVisitCount);
+    
+    // Also try to update when the script loads (in case DOMContentLoaded already fired)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateVisitCount);
+    } else {
+      updateVisitCount();
+    }
   </script>
 </footer>
