@@ -148,6 +148,9 @@
             slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 3000); // 3 seconds per slide
         }
+        fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
     </script>
 </body>
 </html>

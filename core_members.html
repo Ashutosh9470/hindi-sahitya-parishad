@@ -87,6 +87,7 @@
   <div id="navbar-placeholder"></div>
   <link rel="stylesheet" href="css/navbar.css">
   <script src="js/include-navbar.js"></script>
+  
 
   <main>
     <h2>परिषद कार्यकारिणी</h2>
@@ -115,7 +116,7 @@
         <span>महाप्रबंधक (वि. व रा.प्र. सं.)<br>दा घा नि, बो ता वि के</span>
       </div>
       <div class="card">
-        <img src="https://i.ibb.co/FLR4JSb2/post9.jpg" alt="कालीचरण">
+        <img src="https://i.ibb.co/XfJ9Y3Yc/post9.jpg" alt="कालीचरण">
         <b>श्री कालीचरण शर्मा</b>
         <span>उप महाप्रबंधक (प्रशासन)<br>दा घा नि, बो ता वि के</span>
       </div>
@@ -220,7 +221,16 @@
         <span>सहायक नियंत्रक (यां)<br>परिचालन (यां) अनुभाग, दा घा नि, बो ता वि के</span>
       </div>
     </div>
+    <script>
+    // Load footer.html into the placeholder
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
   </main>
+  
 
   <div id="footer-placeholder"></div>
 </body>
